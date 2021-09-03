@@ -1,7 +1,7 @@
 <h1 align="center">Realtime Face Anti-Spoofing Detection</h1>
 
-<div align= "center"><img src="https://github.com/Prem95/face-liveness-detector/misc/face.jpg" width="200" height="150"/>
-  <h4>Realtime Face Anti Spoofing Detection with Face Detector to detect REAL and FAKE faces. Built using Tensorflow, Keras and OpenCV</h4>
+<div align= "center"><img src="https://github.com/Prem95/face-liveness-detector/blob/main/misc/face.jpg" width="350" height="250"/>
+  <h4>Realtime Face Anti Spoofing Detection with Face Detector to detect real and face faces. Built using Tensorflow, Keras and OpenCV</h4>
 </div>
 
 ![Python](https://img.shields.io/badge/Python-v3.8+-blue.svg)
@@ -60,7 +60,7 @@ Run the following command in your terminal
 $ python main.py
 ```
 
-Current Face Anti Spoofing threshold is set at a value of **0.70**. This can be finetuned based on different situations as needed.
+Note: Current Face Anti Spoofing threshold is set at a value of **0.70**. This can be finetuned based on different situations as needed.
 
 ## Contribution
 
