@@ -10,7 +10,7 @@
 [![Stargazers](https://img.shields.io/github/stars/Prem95/face-liveness-detector.svg?logo=github)](https://github.com/Prem95/face-liveness-detector/stargazers)
 
 
-! [Actual Demo](https://github.com/Prem95/face-liveness-detector/blob/main/misc/demo.gif)
+![Actual Demo](https://github.com/Prem95/face-liveness-detector/blob/main/misc/demo.gif)
 
 
 ## Why Build This?
