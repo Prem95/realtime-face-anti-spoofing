@@ -1,7 +1,7 @@
 <h1 align="center">Realtime Face Anti-Spoofing Detection</h1>
 
 <div align= "center"><img src="https://github.com/Prem95/face-liveness-detector/blob/main/misc/face.jpg" width="350" height="250"/>
-  <h4>Realtime Face Anti Spoofing Detection with Face Detector to detect real and face faces. Built using Tensorflow, Keras and OpenCV</h4>
+  <h3>Realtime Face Anti Spoofing Detection with Face Detector to detect real and face faces. Built using Tensorflow, Keras and OpenCV</h3>
 </div>
 
 ![Python](https://img.shields.io/badge/Python-v3.8+-blue.svg)
@@ -10,11 +10,9 @@
 [![Stargazers](https://img.shields.io/github/stars/Prem95/face-liveness-detector.svg?logo=github)](https://github.com/Prem95/face-liveness-detector/stargazers)
 
 
-<div align= "center"><img src="https://github.com/Prem95/face-liveness-detector/blob/main/misc/demo.gif" width="350" height="250"/>
-  <h4>Realtime Face Anti Spoofing Detection with Face Detector to detect real and face faces. Built using Tensorflow, Keras and OpenCV</h4>
+<div align= "center"><img src="https://github.com/Prem95/face-liveness-detector/blob/main/misc/demo.gif" width="500" height="450"/>
+  <h4>Realtime Demo</h4>
 </div>
-
-![Actual Demo](https://github.com/Prem95/face-liveness-detector/blob/main/misc/demo.gif)
 
 
 ## Why Build This?
