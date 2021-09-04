@@ -4,6 +4,7 @@
   <h3>Realtime Face Anti Spoofing Detection with Face Detector to detect real and face faces. Built using Tensorflow, Keras and OpenCV</h3>
 </div>
 
+![](https://komarev.com/ghpvc/?username=Prem95&style=flat-square&label=Views)
 ![Python](https://img.shields.io/badge/Python-v3.8+-blue.svg)
 [![contributions welcome](https://img.shields.io/badge/Contributions-Welcome-green.svg?style=flat)](https://github.com/Prem95/face-liveness-detector/issues)
 [![Forks](https://img.shields.io/github/forks/Prem95/face-liveness-detector.svg?logo=github)](https://github.com/Prem95/face-liveness-detector/network/members)
