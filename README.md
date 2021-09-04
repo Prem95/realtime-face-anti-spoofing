@@ -25,7 +25,7 @@ This Face Anti Spoofing detector can possible be used in many different systems 
 
 This integrated with hardware systems for application in offices, schools, and public places for various use cases.
 
-## Datasets
+## Datasets and Library
 
 The model is trained using Tensorflow from publicly available datasets. Below listed are the data sources that the model is trained on:
 
@@ -35,11 +35,14 @@ OULU: https://sites.google.com/site/oulunpudatabase/
 
 NUAA: http://parnec.nuaa.edu.cn/_upload/tpl/02/db/731/template731/pages/xtan/NUAAImposterDB_download.html
 
+3DDFA: https://github.com/cleardusk/3DDFA (Face Detector Library)
+
 Please obtain the necessary permissions before using the datasets as above.
 
 ## Prerequisites
 
 All the required libraries are included in the file ```requirements.txt```
+Face Detector library, 3DDFA aka (```face_det```) is added as part of the repo for easy development.
 
 
 ## Installation
