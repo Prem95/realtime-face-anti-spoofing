@@ -13,7 +13,7 @@
 
 <div align= "center"><img src="https://github.com/Prem95/face-liveness-detector/blob/main/misc/demo.gif" width="600" height="550"/></div>
 
-<h2>Please star this repo if it is usefull for you!:star2: </h2>
+<h2>Please star this repo if it is useful for you!:star2: </h2>
 <br/><br/>
 
 ## Why Build This? :thinking:
@@ -21,9 +21,9 @@ Face anti-spoofing systems has lately attracted increasing attention due to its 
 
 
 ## Where to use? :hammer:
-This Face Anti Spoofing detector can possible be used in many different systems that needs realtime facial recognition with facial landmarks. Potentially could be used in security systems, biometrics, attendence systems and etc.
+This Face Anti Spoofing detector can be used in many different systems that needs realtime facial recognition with facial landmarks. Potentially could be used in security systems, biometrics, attendence systems and etc.
 
-This integrated with hardware systems for application in offices, schools, and public places for various use cases.
+Can be integrated with hardware systems for application in offices, schools, and public places for various use cases.
 
 ## Datasets and Library :green_book:
 
