@@ -57,6 +57,12 @@ $ cd face-liveness-detector
 $ pip install -r requirements.txt
 ```
 
+4. Build the Face Detector library
+```
+$ cd face_det
+$ sh build.sh
+```
+
 ## Usage
 
 Run the following command in your terminal
