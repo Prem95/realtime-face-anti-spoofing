@@ -71,7 +71,7 @@ $ sh build.sh
 Run the following command in your terminal
 
 ```
-$ python main.py
+$ python3 main.py
 ```
 
 Note: Current Face Anti Spoofing threshold is set at a value of **0.70**. This can be finetuned based on different situations as needed.

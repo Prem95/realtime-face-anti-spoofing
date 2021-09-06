@@ -2,6 +2,7 @@ import sys
 import os
 sys.path.insert(1, os.getcwd())
 from utility.video_utils import VideoUtils
+#from utility.video_utils import VideoUtils
 from face_det.TDDFA import TDDFA
 from face_det.FaceBoxes import FaceBoxes
 from face_detector import FaceDetector
