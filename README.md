@@ -40,7 +40,7 @@ Please obtain the necessary permissions before using the datasets as above.
 
 ## Prerequisites :umbrella:
 
-All the required libraries are included in the file ```requirements.txt```
+All the required libraries are included in the file ```requirements.txt```. Tested on Ubuntu 20.04 with Python3.8. 
 Face Detector library, 3DDFA aka (```face_det```) is added as part of the repo for easy development.
 
 
