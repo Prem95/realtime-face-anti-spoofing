@@ -10,6 +10,7 @@ from face_detector import FaceDetector
 from face_det.FaceBoxes import FaceBoxes
 from face_det.TDDFA import TDDFA
 import yaml
+from focal_loss import SparseCategoricalFocalLoss
 
 gpus = tf.config.experimental.list_physical_devices('GPU')
 if gpus:
@@ -58,16 +59,16 @@ class VideoUtils(object):
         img_array_expanded = np.expand_dims(standard_face, axis=0)
         return img_array_expanded
 
-
     def load_keras_model(model_path):
         try:
-            model = tf.keras.models.load_model(model_path, custom_objects={"lr": lambda x: x, "SparseCategoricalFocalLoss": lambda x: x})
+            model = tf.keras.models.load_model(model_path, custom_objects={"lr": lambda x: x, "SparseCategoricalFocalLoss": SparseCategoricalFocalLoss})
             model.status = 0
         except Exception as e:
             class empty_model(object):
                 def __init__(self):
                     self.status = 600
             model = empty_model()
+            print(e)
             print('[ERROR] Model failed to load. Check file path.')
             sys.exit()
         return model

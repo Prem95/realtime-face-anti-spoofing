@@ -2,7 +2,6 @@ import sys
 import os
 sys.path.insert(1, os.getcwd())
 from utility.video_utils import VideoUtils
-#from utility.video_utils import VideoUtils
 from face_det.TDDFA import TDDFA
 from face_det.FaceBoxes import FaceBoxes
 from face_detector import FaceDetector
@@ -20,7 +19,8 @@ if gpus:
     except RuntimeError as e:
         print(e)
 
-FAS_MODEL_PATH = "model/antispoofing.h5"
+# Model path
+FAS_MODEL_PATH = "model/fas_beta.h5"
 
 def get_normal_face(img):
     return img/255.
@@ -62,6 +62,7 @@ while True:
 
     # Check if face is present
     n = len(boxes[0])
+    FACE_THRESHOLD = 0.7
     if n == 0:
         cv2.putText(frame, "Faces: %s" % (n), (500, 30),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 200), 2)
@@ -69,10 +70,10 @@ while True:
         cv2.putText(frame, "Faces: %s" % (n), (500, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 200), 2)
         face_image = VideoUtils.get_liveness_score(frame, boxes[0])
         liveness_score = (np.round(model.predict(face_image)[:, 1].tolist()[0], 3))
-        cv2.putText(frame, "Liveness: %s" % liveness_score, (20, 30), cv2.FONT_HERSHEY_DUPLEX,0.7, (0, 0, 200) if liveness_score < 0.7 else (0, 200, 0), 1)
+        cv2.putText(frame, "Liveness: %s" % liveness_score, (20, 30), cv2.FONT_HERSHEY_DUPLEX,0.7, (0, 0, 200) if liveness_score < FACE_THRESHOLD else (0, 200, 0), 1)
         cv2.rectangle(frame, (boxes[0][0][3], boxes[0][0][2]), (boxes[0][0][1], boxes[0][0][0]), (255, 0, 0), 2)
 
-    cv2.imshow("FAS Detector", frame)
+    cv2.imshow("Face Detector", frame)
 
     # Reduce the frames for a more slower detection
     key = cv2.waitKey(15)
