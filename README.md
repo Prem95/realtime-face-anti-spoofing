@@ -15,6 +15,25 @@
 <h2>Please star this repo if it is useful for you!:star2: </h2>
 <br/><br/>
 
+## Changelog
+All notable changes to this project will be documented in this file.
+The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
+
+## [1.1] - 10/09/2021
+
+### Added
+
+- Added realtime bluriness detector based on OpenCV
+
+
+## [1.0] - 03/09/2021
+
+### Added
+
+- First commit with Face Detector, updated README
+- Fixed minor issues with models not loading
+
+
 ## Why Build This? :thinking:
 Face anti-spoofing systems has lately attracted increasing attention due to its important role in securing face recognition systems from fraudulent attacks. This project aims to provide a starting point in recognising real and fake faces based on a model that is trained with publicly available dataset
 

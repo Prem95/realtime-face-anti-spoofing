@@ -43,6 +43,16 @@ class VideoUtils(object):
         faces = np.array([[top, right, bottom, left] for left, top, right, bottom, _ in faces]).astype(int).tolist()
         return faces
 
+    def cut_face_locations(frame, boxes):
+        face_location = [[left, top, right, bottom] for top, right, bottom, left in boxes]
+        try:
+            xmin, ymin, xmax, ymax = max(face_location, key=lambda x: (x[2]-x[0]) * (x[3]-x[1]))
+        except ValueError as e:
+            return None
+
+        return frame[max(ymin, 0):ymax, max(xmin, 0):xmax].copy()
+
+
     def get_liveness_score(frame, boxes):
 
         face_location = [[left, top, right, bottom] for top, right, bottom, left in boxes]
@@ -57,7 +67,7 @@ class VideoUtils(object):
         face_img = frame[max(ymin, 0):ymax, max(xmin, 0):xmax].copy()
         standard_face = np.array(get_normal_face(cv2.resize(face_img, (112, 112))))
         img_array_expanded = np.expand_dims(standard_face, axis=0)
-        return img_array_expanded
+        return img_array_expanded, standard_face
 
     def load_keras_model(model_path):
         try:
@@ -102,3 +112,28 @@ class VideoUtils(object):
             cv2.line(img, left_bottom, left_top, GREEN, 1, cv2.LINE_AA)
 
         return img
+
+
+    def estimate_blur(image: np.array):
+
+        # Input an image array
+        if type(image).__module__ == 'numpy':
+            if image.ndim == 3:
+                image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            return np.var(cv2.Laplacian(image, cv2.CV_64F))
+        else:
+            image = cv2.imread(image)
+            if image.ndim == 3:
+                image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            return np.var( cv2.Laplacian(image, cv2.CV_64F))
+
+    def rgb2hsv(img_path):
+
+        # Input an image array
+        if type(img_path).__module__ == 'numpy':
+            hsv = cv2.cvtColor(img_path, cv2.COLOR_BGR2HSV)
+            return hsv[...,2].mean()
+        else:
+            img = cv2.imread(img_path)
+            hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+            return hsv[...,2].mean()

@@ -5,10 +5,10 @@ from utility.video_utils import VideoUtils
 from face_det.TDDFA import TDDFA
 from face_det.FaceBoxes import FaceBoxes
 from face_detector import FaceDetector
+import cv2
 import yaml
 import numpy as np
 import tensorflow as tf
-import cv2
 
 # Allow GPU memory growth
 gpus = tf.config.experimental.list_physical_devices('GPU')
@@ -20,7 +20,9 @@ if gpus:
         print(e)
 
 # Model path
-FAS_MODEL_PATH = "model/fas_beta.h5"
+FAS_MODEL_PATH = "model/antispoofing.h5"
+FACE_THRESHOLD = 0.7
+BLUR_THRESHOLD = 350
 
 def get_normal_face(img):
     return img/255.
@@ -36,8 +38,7 @@ face_detector = FaceDetector()
 
 print("[INFO] Starting video stream...")
 root_path = "face_det"
-cfg = yaml.load(open('%s/configs/mb1_120x120.yml' %
-                     root_path), Loader=yaml.SafeLoader)
+cfg = yaml.load(open('%s/configs/mb1_120x120.yml' % root_path), Loader=yaml.SafeLoader)
 cfg['bfm_fp'] = os.path.join(root_path, cfg['bfm_fp'])
 cfg['checkpoint_fp'] = os.path.join(root_path, cfg['checkpoint_fp'])
 
@@ -59,17 +60,24 @@ while True:
     # Call face detector to obtain face image
     frame_bgr = frame[..., ::-1]
     boxes = face_detector(np.array(frame_bgr))
+    facebox = face_detector(np.array(frame))
 
     # Check if face is present
     n = len(boxes[0])
-    FACE_THRESHOLD = 0.7
+
     if n == 0:
         cv2.putText(frame, "Faces: %s" % (n), (500, 30),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 200), 2)
     else:
-        cv2.putText(frame, "Faces: %s" % (n), (500, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 200), 2)
+        cv2.putText(frame, "Faces: %s" % (n), (480, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 200), 2)
         face_image = VideoUtils.get_liveness_score(frame, boxes[0])
-        liveness_score = (np.round(model.predict(face_image)[:, 1].tolist()[0], 3))
+        blur_value = VideoUtils.estimate_blur(frame)
+        raw_face_loc = VideoUtils.cut_face_locations(frame, facebox[0])
+        blurness = np.round(VideoUtils.estimate_blur(raw_face_loc), 2)
+        liveness_score = (np.round(model.predict(face_image[0])[:, 1].tolist()[0], 3))
+
+        # Frame annotations
+        cv2.putText(frame, "Blur: %s" % blurness, (480, 50), cv2.FONT_HERSHEY_DUPLEX, 0.7, (0,0,255) if blurness < BLUR_THRESHOLD else (0, 200, 0), 2)
         cv2.putText(frame, "Liveness: %s" % liveness_score, (20, 30), cv2.FONT_HERSHEY_DUPLEX,0.7, (0, 0, 200) if liveness_score < FACE_THRESHOLD else (0, 200, 0), 1)
         cv2.rectangle(frame, (boxes[0][0][3], boxes[0][0][2]), (boxes[0][0][1], boxes[0][0][0]), (255, 0, 0), 2)
 
