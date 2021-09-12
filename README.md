@@ -1,19 +1,16 @@
 <h1 align="center">Realtime Face Anti-Spoofing Detection :robot:</h1>
 
-<div align= "center"><img src="https://github.com/Prem95/face-liveness-detector/blob/main/misc/face.jpg" width="450" height="320"/>
-  <h3>Realtime Face Anti-Spoofing Detection with Face Detector using TensorFlow and OpenCV</h3>
-</div>
-
 ![](https://komarev.com/ghpvc/?username=Prem95&style=flat-square&label=Views)
-![Python](https://img.shields.io/badge/Python-v3.8+-blue.svg)
-[![contributions welcome](https://img.shields.io/badge/Contributions-Welcome-green.svg?style=flat)](https://github.com/Prem95/face-liveness-detector/issues)
+![Python](https://img.shields.io/badge/Python-3.8-blue.svg)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-20.04-blue.svg)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0+-blue.svg)
 [![Forks](https://img.shields.io/github/forks/Prem95/face-liveness-detector.svg?logo=github)](https://github.com/Prem95/face-liveness-detector/network/members)
 [![Stargazers](https://img.shields.io/github/stars/Prem95/face-liveness-detector.svg?logo=github)](https://github.com/Prem95/face-liveness-detector/stargazers)
+[![contributions welcome](https://img.shields.io/badge/Contributions-Welcome-green.svg?style=flat)](https://github.com/Prem95/face-liveness-detector/issues)
 
 <div align= "center"><img src="https://github.com/Prem95/face-liveness-detector/blob/main/misc/demo.gif" width="600" height="550"/></div>
 
 <h2>Please star this repo if it is useful for you!:star2: </h2>
-<br/><br/>
 
 ## Changelog
 All notable changes to this project will be documented in this file.
