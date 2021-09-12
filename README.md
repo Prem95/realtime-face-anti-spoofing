@@ -1,7 +1,7 @@
 <h1 align="center">Realtime Face Anti-Spoofing Detection :robot:</h1>
 
 <div align= "center"><img src="https://github.com/Prem95/face-liveness-detector/blob/main/misc/face.jpg" width="450" height="320"/>
-  <h3>Realtime Face Anti Spoofing Detection with Face Detector to detect real and fake faces</h3>
+  <h3>Realtime Face Anti-Spoofing Detection with Face Detector using TensorFlow and OpenCV</h3>
 </div>
 
 ![](https://komarev.com/ghpvc/?username=Prem95&style=flat-square&label=Views)
