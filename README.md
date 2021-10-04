@@ -23,7 +23,7 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 
 ## [1.1] - 10/09/2021
 - Added realtime bluriness detector based on OpenCV
-<div align= "center"><img src="https://github.com/Prem95/face-liveness-detector/blob/main/misc/blur.png" width="400" height="450"/></div>
+<div align= "center"><img src="https://github.com/Prem95/face-liveness-detector/blob/main/misc/blur.png" width="500" height="450"/></div>
 
 
 ## [1.0] - 03/09/2021
