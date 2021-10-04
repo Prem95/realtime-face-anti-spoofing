@@ -11,6 +11,7 @@ from face_det.FaceBoxes import FaceBoxes
 from face_det.TDDFA import TDDFA
 import yaml
 from focal_loss import SparseCategoricalFocalLoss
+from tensorflow.keras.models import load_model
 
 gpus = tf.config.experimental.list_physical_devices('GPU')
 if gpus:

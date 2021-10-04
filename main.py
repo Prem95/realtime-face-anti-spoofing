@@ -20,7 +20,7 @@ if gpus:
         print(e)
 
 # Model path
-FAS_MODEL_PATH = "model/antispoofing.h5"
+FAS_MODEL_PATH = "model/fas_94.h5"
 FACE_THRESHOLD = 0.7
 BLUR_THRESHOLD = 350
 
