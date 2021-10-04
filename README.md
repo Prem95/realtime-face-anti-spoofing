@@ -16,18 +16,17 @@
 All notable changes to this project will be documented in this file.
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
 
+
+## [1.2] - 04/10/2021
+- Added new Face Anti Spoofing model that has ~96.5% accuracy on public testing data
+
+
 ## [1.1] - 10/09/2021
-
-### Added
-
 - Added realtime bluriness detector based on OpenCV
 <div align= "center"><img src="https://github.com/Prem95/face-liveness-detector/blob/main/misc/blur.png" width="400" height="450"/></div>
 
 
 ## [1.0] - 03/09/2021
-
-### Added
-
 - First commit with Face Detector, updated README
 - Fixed minor issues with models not loading
 
