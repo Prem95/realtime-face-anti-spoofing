@@ -11,15 +11,15 @@
 <div align= "center"><img src="https://github.com/Prem95/face-liveness-detector/blob/main/misc/demo.gif" width="600" height="550"/></div>
 
 
-<h2> Please contact premstroke95@gmail.com to obtain access to the sample model file. The sample model file has an accuracy of 75%. The detection will not work without the sample model file. Thank you. </h2>
+<h3> Contact premstroke95@gmail.com to request the sample model file and utility folder. The sample model file has an accuracy of 75% and can only be used for testing purposes. </h3>
 
 ## Changelog
 All notable changes to this project will be documented in this file.
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
 
 ## [1.0] - 28/12/2021
-- First commit with Face Detector, updated README
-- Fixed minor issues with models not loading
+- First commit
+
 
 ## Why Build This? :thinking:
 Face anti-spoofing systems has lately attracted increasing attention due to its important role in securing face recognition systems from fraudulent attacks. This project aims to provide a starting point in recognising real and fake faces based on a model that is trained with publicly available dataset
@@ -37,10 +37,6 @@ The model is trained using Tensorflow from publicly available datasets. Below li
 CASIA: https://github.com/namtpham/casia2groundtruth
 
 OULU: https://sites.google.com/site/oulunpudatabase/
-
-NUAA: http://parnec.nuaa.edu.cn/_upload/tpl/02/db/731/template731/pages/xtan/NUAAImposterDB_download.html
-
-3DDFA: https://github.com/cleardusk/3DDFA (Face Detector Library)
 
 Please obtain the necessary permissions before using the datasets as above.
 
