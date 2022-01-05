@@ -1,0 +1,13 @@
+scipy==1.6.0
+opencv_python==4.5.1.48
+torch==1.9.0
+Cython==0.29.24
+tqdm==4.61.0
+tensorflow==2.3.1
+torchvision==0.10.0
+numpy==1.18.5
+matplotlib==3.3.3
+onnxruntime==1.8.1
+imageio==2.9.0
+PyYAML==5.4.1
+focal_loss==0.0.7
