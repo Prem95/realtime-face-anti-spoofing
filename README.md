@@ -11,7 +11,7 @@
 <div align= "center"><img src="https://github.com/Prem95/face-liveness-detector/blob/main/misc/demo.gif" width="600" height="550"/></div>
 
 
-<h3> Contact premstroke95@gmail.com to request the sample model file and utility folder. The sample model file has an accuracy of 75% and can only be used for testing purposes. </h3>
+<h3> Contact premstroke95@gmail.com to request the sample model file and utility folder</h3>
 
 ## Changelog
 All notable changes to this project will be documented in this file.
